@@ -1,6 +1,5 @@
 number = input('Please input a possitive integer: ')
-
-if (number.isnumeric()):
+try:
 	number = int(number)
 	if number > 20:
 		print('your input: ' + str(number) + ' > 20')
@@ -8,5 +7,7 @@ if (number.isnumeric()):
 		print('your input: ' + str(number) + ' > 10')
 	if number > 0:
 		print('your input: ' + str(number) + ' > 0')
-else:
-	print('your input is not an integer or it is negative')
+	if number < 0:
+		print('your input: ' + str(number) + ' is negative')
+except ValueError as e:
+	print('your input is not an integer.')
