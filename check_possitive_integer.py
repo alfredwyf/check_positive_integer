@@ -1,4 +1,4 @@
-number = input('Please input a possitive integer')
+number = input('Please input a possitive integer: ')
 
 if (number.isnumeric()):
 	number = int(number)
